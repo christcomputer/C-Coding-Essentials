@@ -212,7 +212,7 @@ int main(void) {
 	if (condition) {
 	    // code to be executed if the condition is true
 	}else {
-  	   // code to be executed if the condition is false	
+  	    // code to be executed if the condition is false	
   	}
 	```
 12. **Largest of Two Number**
@@ -239,6 +239,9 @@ int main(void) {
 13. **Largest of Three Numbers**
 
 ```
+#include <stdio.h>
+#include <stdlib.h>
+
 int main(void) {
 	int num1,num2,num3;
 	setbuf(stdout,NULL);
@@ -260,6 +263,94 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
+
+14. **Basic Calculator**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num1,num2,choice,result;
+	setbuf(stdout,NULL);
+	printf("Enter two number");
+	scanf("%d%d",&num1,&num2);
+	printf("1 for Addition\n2 for Subtraction\n3 for multiplication\n4 for Division\nenter your choice");
+	scanf("%d",&choice);
+	if(choice==1){
+		result=num1+num2;
+		printf("Result is= %d",result);
+	}else if(choice==2){
+		result=num1-num2;
+		printf("Result is= %d",result);
+	}else if(choice==3){
+		result=num1*num2;
+		printf("Result is= %d",result);
+	}else if(choice==4){
+		result=num1/num2;
+		printf("Result is= %d",result);
+	}else{
+		printf("fool!!!!");
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+15. **Switch Sample**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int choice;
+	setbuf(stdout,NULL);
+	printf("1 for Biriyani\n2 for Porota\n3 for fried rice\n4 for appam\nEnter your choice");
+	scanf("%d",&choice);
+	switch(choice){
+	case 1:
+		printf("you have selected Biriyani");
+		break;
+	case 2:
+		printf("you have selected Porota");
+		break;
+	case 3:
+		printf("you have selected fried rice");
+		break;
+	case 4:
+		printf("you have selected appam");
+		break;
+	default:
+		printf("fool");
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+16. **Pass or Fail**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	float mark;
+	setbuf(stdout,NULL);
+	printf("Enter your mark");
+	scanf("%f",&mark);
+	if(mark<50){
+		printf("failed");
+
+	}else if(mark<=100){
+		printf("passed");
+	}else{
+		printf("enter correctly");
+	}
+	return EXIT_SUCCESS;
+}
+```
+
 
 
 
