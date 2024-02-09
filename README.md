@@ -88,4 +88,57 @@ int main(void) {
 	printf("a:%d  b:%d",a,b);
 	return EXIT_SUCCESS;
 }
-```   
+```
+
+6. **Swapping Without Temporary Variable**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int a=12,b=23;
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	printf("a:%d  b:%d",a,b);
+	return EXIT_SUCCESS;
+}
+```
+   
+7. **Input and Print Your name**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	char name;
+	printf("Enter your name: ");
+	fflush( stdout );
+	scanf("%c",&name);
+	printf("Your name is:%c",name);
+	return EXIT_SUCCESS;
+}
+```     
+
+8. **Sum of Two number with setbuf**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int number1;
+	float number2;
+	float sum;
+	setbuf(stdout,NULL);
+	printf("Enter two numbers: ");
+	scanf("%d%f",&number1,&number2);
+	sum=number1+number2;
+	printf("sum is:%f",sum);
+	return EXIT_SUCCESS;
+}
+```
+* `setbuf(stdout,NULL);`: This is a function call that disables the buffering of the standard output stream, which is usually the console or the terminal. The `setbuf()` function is defined in the `stdio.h` header file. The stdout macro represents the standard output stream. The `NULL` macro represents a null pointer, which indicates no buffer is used. The purpose of this function is to ensure that the output is displayed immediately, without waiting for a newline character or a buffer flush .
+  
