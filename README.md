@@ -1,6 +1,6 @@
 # C Programming
 
-* **Print Hello World in C**
+1. **Print Hello World in C**
   
 ```
 #include <stdio.h>
@@ -19,7 +19,7 @@ This is a C program that prints `“!!!Hello World!!!”` to the standard output
 * `puts("!!!Hello World!!!");`: This is a function call that prints the string `“!!!Hello World!!!”` followed by a newline character to the standard output stream, which is usually the console or the terminal. The `puts()` function is defined in the `stdio.h` header file.
 * `return EXIT_SUCCESS;`: This is a return statement that ends the execution of the main function and returns the value of EXIT_SUCCESS to the operating system. The `EXIT_SUCCESS` macro is defined in the `stdlib.h` header file and has a value of `0`, which indicates a successful termination of the program
 
-* **Input a Number and Print the number**
+2. **Input a Number and Print the number**
 
 ```
 #include <stdio.h>
@@ -37,7 +37,7 @@ int main(void) {
 ```    
 * `fflush(stdout);`: This is a function call that forces any buffered data in the standard output stream, which is usually the console or the terminal, to be written immediately. The `fflush()` function is defined in the `stdio.h` header file. The stdout macro represents the standard output stream. The purpose of this function is to ensure that the prompt message `"Enter a number"` is displayed before the user enters the input, as some systems may delay the output until a newline character is encountered.
 
-* **Sum of Two numbers**
+3. **Sum of Two numbers**
 
 ```
 #include <stdio.h>
