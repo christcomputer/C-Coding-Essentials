@@ -35,4 +35,22 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```    
-* `fflush(stdout);`: This is a function call that forces any buffered data in the standard output stream, which is usually the console or the terminal, to be written immediately. The `fflush()` function is defined in the `stdio.h` header file. The stdout macro represents the standard output stream. The purpose of this function is to ensure that the prompt message `"Enter a number"` is displayed before the user enters the input, as some systems may delay the output until a newline character is encountered
+* `fflush(stdout);`: This is a function call that forces any buffered data in the standard output stream, which is usually the console or the terminal, to be written immediately. The `fflush()` function is defined in the `stdio.h` header file. The stdout macro represents the standard output stream. The purpose of this function is to ensure that the prompt message `"Enter a number"` is displayed before the user enters the input, as some systems may delay the output until a newline character is encountered.
+
+* **Sum of Two numbers**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int number1,number2,sum;
+	printf("Enter two numbers"); /* prints enter two numbers */
+	fflush( stdout );/*for printf to execute before scanf  */
+	scanf("%d%d",&number1,&number2);
+	sum=number1+number2;
+	printf("Result is : %d",sum);
+
+	return EXIT_SUCCESS;
+}
+```    
