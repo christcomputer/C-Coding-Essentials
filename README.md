@@ -351,6 +351,130 @@ int main(void) {
 }
 ```
 
+17. **Student Grade**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	float mark;
+	setbuf(stdout,NULL);
+	printf("Enter your mark percentage: ");
+	scanf("%f",&mark);
+	if(mark<=0||mark>100){
+		printf("Please Enter correctly");
+	}else if(mark>=90){
+		printf("your grade is A");
+	}else if(mark>=80){
+		printf("your grade is B");
+	}else if(mark>=70){
+		printf("your grade is C");
+	}else if(mark>=60){
+		printf("your grade is D");
+	}else if(mark>=50){
+		printf("your grade is E");
+	}else{
+		printf("Failed");
+	}
+	return EXIT_SUCCESS;
+}
+```    
+
+18. **Find Week**
+    
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int day;
+	setbuf(stdout,NULL);
+	printf("Enter the day from 1 - 7: ");
+	scanf("%d",&day);
+	switch(day){
+	case 1:
+		printf("Day %d of the week is Sunday",day);
+		break;
+	case 2:
+		printf("Day %d of the week is Monday",day);
+		break;
+	case 3:
+		printf("Day %d of the week is Tuesday",day);
+		break;
+	case 4:
+		printf("Day %d of the week is Wednesday",day);
+		break;
+	case 5:
+		printf("Day %d of the week is Thursday",day);
+		break;
+	case 6:
+		printf("Day %d of the week is Friday",day);
+		break;
+	case 7:
+		printf("Day %d of the week is Saturday",day);
+		break;
+	default:
+		printf("Invalid Entry");
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+19. **Post / Pre Increment / Decrememt**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int a,b,choice;
+	setbuf(stdout,NULL);
+	printf("Enter a number: ");
+	scanf("%d",&a);
+	printf("1 for Post increment b=a++\n2 for Pre increment b=++a\n3 for Post Decrement b=a--\n4 for Pre Decrement b=--a\nEnter your Choice");
+	scanf("%d",&choice);
+	switch(choice){
+	case 1:
+		b=a++;
+		printf("After Post increment value in b= %d and value in a= %d",b,a);
+		break;
+	case 2:
+		b=++a;
+		printf("After Pre increment value in b= %d and value in a= %d",b,a);
+		break;
+	case 3:
+		b=a--;
+		printf("After Post Decrement value in b= %d and value in a= %d",b,a);
+		break;
+	case 4:
+		b=--a;
+		printf("After Pre Decrement value in b= %d and value in a= %d",b,a);
+		break;
+	default:
+		printf("Invalid entry");
+
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+20. **For Loop**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i;
+	for(i=1;i<=100;i++){
+		printf("%d\n",i);
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
 
 
 
