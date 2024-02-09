@@ -164,3 +164,52 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```      
+
+10. **Find a number Positive or Negative**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num;
+	setbuf(stdout,NULL);
+	printf("Enter a number");
+	scanf("%d",&num);
+	if(num<0){
+		printf("number is negative");
+	}else{
+		printf("number is positive");
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+11. **Find Greatest of Two numbers**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num;
+	setbuf(stdout,NULL);
+	printf("Enter a number");
+	scanf("%d",&num);
+	if(num<0){
+		printf("number is negative");
+	}else{
+		printf("number is positive");
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+  * Syntax of if:
+	```
+	if (condition) {
+	    // code to be executed if the condition is true
+	}
+	```
