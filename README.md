@@ -207,9 +207,61 @@ int main(void) {
 }
 ```
 
-  * Syntax of if:
+  * Syntax of if else:
 	```
 	if (condition) {
 	    // code to be executed if the condition is true
-	}
+	}else {
+  	   // code to be executed if the condition is false	
+  	}
 	```
+12. **Largest of Two Number**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int num1,num2;
+	setbuf(stdout,NULL);
+	printf("Enter two number:");
+	scanf("%d%d",&num1,&num2);
+	if(num1>num2){
+		printf("Greatest number is %d",num1);
+	}else{
+		printf("Greatest number is %d",num2);
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+13. **Largest of Three Numbers**
+
+```
+int main(void) {
+	int num1,num2,num3;
+	setbuf(stdout,NULL);
+	printf("Enter three numbers");
+	scanf("%d%d%d",&num1,&num2,&num3);
+	if(num1>num2){
+		if(num1>num3){
+			printf("greatest number is %d",num1);
+
+		}
+	}else{
+		if(num2>num3){
+			printf("greatest number is %d",num2);
+		}else{
+			printf("greatest number is %d",num3);
+		}
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+
+
+
+   
