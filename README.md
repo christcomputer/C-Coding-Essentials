@@ -741,4 +741,428 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
-  
+
+31. **Sum of Array**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int values[100];
+	int sum=0,i,limit;
+	setbuf(stdout,NULL);
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+	printf("Enter the values: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&values[i]);
+
+	}
+	for(i=0;i<limit;i++){
+		sum=sum+values[i];
+	}
+	printf("sum is= %d",sum);
+	return EXIT_SUCCESS;
+}
+```
+
+32. **Array Search**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int values[100];
+	int i,searchkey,limit,flag=0;
+	setbuf(stdout,NULL);
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+
+	printf("Enter the values: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&values[i]);
+	}
+	printf("Enter the Search key: ");
+	scanf("%d",&searchkey);
+	for(i=0;i<limit;i++){
+		if(searchkey==values[i]){
+		    flag=1;
+			break;
+		}
+
+	}
+	if(flag==1){
+		printf("value is found at %d position",i+1);
+
+	}else{
+		printf("value not found");
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+33. **Array Selection sort**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j,values[100],limit,temp;
+	setbuf(stdout,NULL);
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+
+	printf("Enter the numbers for sort: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&values[i]);
+	}
+	for(i=0;i<limit-1;i++){
+		for(j=i+1;j<limit;j++){
+			if(values[i]>values[j]){
+				temp=values[i];
+				values[i]=values[j];
+				values[j]=temp;
+			}
+		}
+	}
+	printf("sorted values are: ");
+	for(i=0;i<limit;i++){
+		printf("%d\t",values[i]);
+	}
+	return EXIT_SUCCESS;
+}
+```      
+
+34. **Interchange Value of two Array**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,limit,First[100],Second[100];
+	setbuf(stdout,NULL);
+	printf("Enter the size of Array: ");
+	scanf("%d",&limit);
+
+	printf("Enter the Values of Array 1: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&First[i]);
+	}
+
+	printf("Enter the Values of Array 2: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&Second[i]);
+	}
+	for(i=0;i<limit;i++){
+		First[i]=First[i]+Second[i];
+		Second[i]=First[i]-Second[i];
+		First[i]=First[i]-Second[i];
+	}
+	printf("Arrays after swapping: ");
+
+	printf("\nArray1: ");
+	for(i=0;i<limit;i++){
+		printf("%d\t",First[i]);
+	}
+	printf("\nArray2: ");
+	for(i=0;i<limit;i++){
+		printf("%d\t",Second[i]);
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+35. **No. of Even number in an Array**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,limit,values[100],count=0;
+	setbuf(stdout,NULL);
+	printf("Enter the size of an array: ");
+	scanf("%d",&limit);
+
+	printf("Enter the values of array: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&values[i]);
+	}
+	for(i=0;i<limit;i++){
+		if(values[i]%2==0){
+			count=count+1;
+		}
+	}
+	printf("Number of even numbers in the given array is %d",count);
+	return EXIT_SUCCESS;
+}
+```
+
+36. **Sort Array in Descending Order**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j,values[100],limit,temp;
+	setbuf(stdout,NULL);
+
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+
+	printf("Enter the values of array: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&values[i]);
+	}
+	for(i=0;i<limit-1;i++){
+		for(j=i+1;j<limit;j++){
+			if(values[i]<values[j]){
+				temp=values[i];
+				values[i]=values[j];
+				values[j]=temp;
+			}
+		}
+	}
+	printf("Sorted array: ");
+	for(i=0;i<limit;i++){
+		printf("%d\t",values[i]);
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+37. **MultiDimensional Array**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j,values[3][3];
+	setbuf(stdout,NULL);
+	printf("Enter the values: ");
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
+			scanf("%d",&values[i][j]);
+		}
+	}
+	printf("Entered values are: \n");
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
+			printf("%d\t",values[i][j]);
+		}
+		printf("\n");
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+## Function in C
+
+38. **Function without argument and no return value**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void sum();
+int main(void) {
+	sum();
+
+	return EXIT_SUCCESS;
+}
+void sum(){
+	int num1,num2,sum;
+	setbuf(stdout,NULL);
+	printf("Enter two numbers: ");
+	scanf("%d%d",&num1,&num2);
+	sum=num1+num2;
+	printf("Sum is %d",sum);
+}
+```
+
+39. **Function with argument and no return value**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void sum(int,int);
+int main(void) {
+	int a,b;
+	setbuf(stdout,NULL);
+	printf("Enter two numbers: ");
+	scanf("%d%d",&a,&b);
+	sum(a,b);
+	return EXIT_SUCCESS;
+}
+void sum(int num1,int num2){
+	int b;
+	b=num1+num2;
+	printf("Sum is %d",b);
+}
+```
+
+40. **Function with argument and with return value**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void sum(int,int);
+int main(void) {
+	int a,b;
+	setbuf(stdout,NULL);
+	printf("Enter two numbers: ");
+	scanf("%d%d",&a,&b);
+	sum(a,b);
+	return EXIT_SUCCESS;
+}
+void sum(int num1,int num2){
+	int b;
+	b=num1+num2;
+	printf("Sum is %d",b);
+}
+```
+
+41. **Function without argument and with return value**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int sum();
+int main(void) {
+	int c;
+	c=sum();
+	printf("Sum is %d",c);
+
+	return EXIT_SUCCESS;
+}
+int sum(){
+	int a,b,result;
+	setbuf(stdout,NULL);
+	printf("Enter two values: ");
+	scanf("%d%d",&a,&b);
+	result=a+b;
+	return result;
+}
+```
+
+42. **String Palindrome**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void) {
+	int i,length,flag=0;
+	char str[20];
+	setbuf(stdout,NULL);
+	printf("Enter a string: ");
+	scanf("%s",str);
+	length=strlen(str);
+
+
+	for(i=0;i<length;i++){
+		if(str[i]!=str[length-i-1]){
+			flag=1;
+			break;
+		}
+	}
+	if(flag==0){
+		printf("%s is a palindrome",str);
+	}else{
+		printf("%s is not a palindrome",str);
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+43. **Add 2D Arrays**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j,n,Array1[10][10],Array2[10][10],sum[10][10];
+	setbuf(stdout,NULL);
+	printf("Enter the size of arrays");
+	scanf("%d",&n);
+	printf("Enter the values of array 1: \n");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			scanf("%d",&Array1[i][j]);
+		}
+
+	}
+	printf("Enter the values of array 2: \n");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			scanf("%d",&Array2[i][j]);
+		}
+
+	}
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			sum[i][j]=Array1[i][j]+Array2[i][j];
+		}
+
+	}
+	printf("Sum of 2 arrays is: \n");
+	for(i=0;i<n;i++){
+		for(j=0;j<n;j++){
+			printf("%d\t",sum[i][j]);
+		}
+		printf("\n");
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+44. **Array Display using function**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void getArray(int);
+void displayArray(int);
+
+int main(void) {
+	setbuf(stdout,NULL);
+	int limit;
+	printf("Enter the size of the array: ");
+	scanf("%d",&limit);
+	getArray(limit);
+	displayArray(limit);
+
+	return EXIT_SUCCESS;
+}
+void getArray(int limit1){
+	int array1[20],i;
+	printf("Enter values to the array:  ");
+	for(i=0;i<limit1;i++){
+		scanf("%d",&array1[i]);
+	}
+
+
+}
+void displayArray(int limit2){
+	int array2[20],i;
+	printf("Array is: \n");
+	for(i=0;i<limit2;i++){
+		printf("%d\t",array2[i]);
+	}
+
+}
+```   
