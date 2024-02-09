@@ -327,6 +327,23 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
+ * Switch Syntax:
+	```
+	switch (expression) {
+	    case value1:
+	        // statements for value1
+	        break; // optional
+	    case value2:
+	        // statements for value2
+	        break; // optional
+	    // more cases can be added
+	    default:
+	        // statements for default case
+	        break; // optional
+	}
+	```
+ 	* The expression is evaluated once and compared with the values of each case label. If there is a match, the corresponding statements are executed. If there is no match, the default statements are executed if present.
+  	* The break statement is used to terminate the switch block and jump to the next line after the switch statement. The break statement is optional, but if omitted, the execution will continue to the next case
 
 16. **Pass or Fail**
 
