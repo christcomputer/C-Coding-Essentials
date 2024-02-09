@@ -141,4 +141,26 @@ int main(void) {
 }
 ```
 * `setbuf(stdout,NULL);`: This is a function call that disables the buffering of the standard output stream, which is usually the console or the terminal. The `setbuf()` function is defined in the `stdio.h` header file. The stdout macro represents the standard output stream. The `NULL` macro represents a null pointer, which indicates no buffer is used. The purpose of this function is to ensure that the output is displayed immediately, without waiting for a newline character or a buffer flush .
-  
+
+9. **Find Simple Interest**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int P;
+	float R,n,SI;
+	setbuf(stdout,NULL);
+	printf("Enter the Principal Amount: ");
+	scanf("%d",&P);
+	printf("Enter the interest: ");
+	scanf("%f",&R);
+	printf("Enter number of year of loan: ");
+	scanf("%f", &n);
+	SI=(P*R*n/100);
+
+	printf("simple interest is:%f",SI); 
+	return EXIT_SUCCESS;
+}
+```      
