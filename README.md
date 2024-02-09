@@ -72,7 +72,7 @@ int main(void) {
 }
 ```   
 
-5. **Swapping With Temporary Variable
+5. **Swapping With Temporary Variable**
 
 ```
 #include <stdio.h>
