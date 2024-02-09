@@ -11,7 +11,7 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
-This is a C program that prints `**“!!!Hello World!!!”**` to the standard output stream. Here is a line-by-line explanation of the code:
+This is a C program that prints **“!!!Hello World!!!”** to the standard output stream. Here is a line-by-line explanation of the code:
 
 * `#include <stdio.h>`: This is a preprocessor directive that tells the compiler to include the header file `stdio.h`, which contains the declarations of input/output functions such as `printf()` and `puts()`.
 * `#include <stdlib.h>`: This is another preprocessor directive that tells the compiler to include the header file `stdlib.h`, which contains the declaration of the macro `EXIT_SUCCESS`, which represents a successful termination of the program.
