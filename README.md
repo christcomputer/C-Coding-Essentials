@@ -53,4 +53,39 @@ int main(void) {
 
 	return EXIT_SUCCESS;
 }
-```    
+```
+
+4. **Average of Three number**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	float num1,num2,num3,avg;
+	printf("Enter three number");
+	fflush( stdout );
+	scanf("%f%f%f",&num1,&num2,&num3);
+	avg=(num1+num2+num3)/3;
+	printf("average of 3 number is :%f",avg);
+	return EXIT_SUCCESS;
+}
+```   
+
+5. **Swapping With Temporary Variable
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int a=10,b=21,temp;
+
+	temp=a;
+	a=b;
+	b=temp;
+
+	printf("a:%d  b:%d",a,b);
+	return EXIT_SUCCESS;
+}
+```   
