@@ -491,9 +491,254 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
+ * For loop Syntax:
+	```
+	for (initialization; condition; update) {
+	    // statements to be executed
+	}
+	```
+	* The initialization is where the loop control variable is declared and assigned an initial value.
+ 	* The condition is a logical expression that determines whether the loop should continue or not.
+ 	* The update is where the loop control variable is modified after each iteration.
+  	* The statements inside the loop body are executed as long as the condition is true.
+
+21. **Sum of n numbers**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,sum=0,number;
+	setbuf(stdout,NULL);
+	printf("Enter a number");
+	scanf("%d",&number);
+	for(i=1;i<=number;i++){
+		sum=sum+i;
+
+	}
+	printf("result is: %d",sum);
+	return EXIT_SUCCESS;
+}
+```
+
+22. **Print even numbers**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,limit;
+	setbuf(stdout,NULL);
+	printf("Enter limit of even number to be printed: ");
+	scanf("%d",&limit);
+	for(i=2;i<=limit;i++){
+		if(i%2==0){
+			printf("%d\n",i);
+		}
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+23. **Prime numbers**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,flag=0,number;
+	setbuf(stdout,NULL);
+	printf("Enter a number: ");
+	scanf("%d",&number);
+	for(i=2;i<=number/2;i++){
+		if(number%i==0){
+			flag=1;
+			break;
+		}
+	}
+	if(flag==0){
+		printf("%d is prime number",number);
+
+	}else{
+		printf("%d is not prime number",number);
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+24. **Print Star Pattern**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int limit,i,j;
+	setbuf(stdout,NULL);
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+	for(i=1;i<=limit;i++){
+		for(j=0;j<i;j++){
+			printf("* ");
+		}
+		printf("\n");
+	}
+
+
+	return EXIT_SUCCESS;
+}
+```
+
+25. **Reverse Pyramid star**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j,limit;
+	setbuf(stdout,NULL);
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+	for(i=limit;i>=1;i--){
+		for(j=0;j<i;j++){
+			printf("* ");
+
+		}
+		printf("\n");
+
+	}
+
+	return EXIT_SUCCESS;
+}
+```
+
+26. **Multiplication Table**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,number,result=0;
+	setbuf(stdout,NULL);
+	printf("Enter a number: ");
+	scanf("%d",&number);
+	for(i=1;i<=10;i++){
+		result=i*number;
+		printf("%d * %d = %d \n",i,number,result);
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+27. **`break` and `continue` in C**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,choice,n=10;
+	setbuf(stdout,NULL);
+	printf("1 for break\n2 for switch\nEnter your choice: ");
+	scanf("%d",&choice);
+
+	if(choice==1){
+
+	for(i=1;i<=n;i++){
+		printf("Hi ");
+		if(i==5){
+			break;
+		}
+		printf("Hello\n");
+	}
+	printf("\nfinished");
 
 
 
+	}else if(choice==2){
 
+		for(i=1;i<=n;i++){
+			printf("Hi ");
+			if(i==5){
+				printf("\n");
+				continue;
+			}
+			printf("Hello\n");
+		}
+		printf("finished");
+	}
 
-   
+	return EXIT_SUCCESS;
+}
+```
+
+28. **Sum of odd number**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,limit,sum=0;
+	setbuf(stdout,NULL);
+	printf("Enter the limit: ");
+	scanf("%d",&limit);
+	for(i=1;i<=limit;i=i+2){
+		sum=sum+i;
+	}
+	printf("sum of odd numbers= %d",sum);
+	return EXIT_SUCCESS;
+}
+```
+
+29. **Nested Loop**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,j,num;
+	setbuf(stdout,NULL);
+	printf("Enter the row of pattern: ");
+	scanf("%d",&num);
+	for(i=1;i<=num;i++){
+		for(j=1;j<=i;j++){
+			printf("%d ",j);
+		}
+		printf("\n");
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+30. **Array Input and Output that array**
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int a[100];
+	int i,limit;
+	setbuf(stdout,NULL);
+	printf("Enter array limit");
+	scanf("%d",&limit);
+	printf("Enter values: ");
+	for(i=0;i<limit;i++){
+		scanf("%d",&a[i]);
+
+	}
+	printf("Entered values are: ");
+	for(i=0;i<limit;i++){
+		printf("%d\t", a[i]);
+	}
+	return EXIT_SUCCESS;
+}
+```
+  
