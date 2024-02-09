@@ -438,7 +438,7 @@ int main(void) {
 }
 ```
 
-19. **Post / Pre Increment / Decrememt**
+19. **Post / Pre Increment / Decrement**
 
 ```
 #include <stdio.h>
@@ -475,6 +475,8 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
+
+## for loop
 
 20. **For Loop**
 
@@ -716,6 +718,8 @@ int main(void) {
 	return EXIT_SUCCESS;
 }
 ```
+
+## Array
 
 30. **Array Input and Output that array**
 
