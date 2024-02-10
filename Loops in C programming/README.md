@@ -1,6 +1,6 @@
 # Different types of loop in C program
 
-1. for loop:
+1. ###for loop:
    * This loop has a fixed number of iterations, which are specified by an initialization, a test, and an update expression.
    * For example:
      ```
