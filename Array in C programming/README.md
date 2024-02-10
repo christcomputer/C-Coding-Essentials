@@ -1,7 +1,7 @@
 # Array
 
-* An array in C is a collection of elements of the same data type that are stored in contiguous memory locations. 
-* Arrays can have one or more dimensions, and can be initialized with or without specifying the size.
+1. An array in C is a collection of elements of the same data type that are stored in contiguous memory locations. 
+2. Arrays can have one or more dimensions, and can be initialized with or without specifying the size.
 
 * declare a one-dimensional array of 5 integers
 ```
