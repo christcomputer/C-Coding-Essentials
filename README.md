@@ -1019,19 +1019,20 @@ void sum(int num1,int num2){
 #include <stdio.h>
 #include <stdlib.h>
 
-void sum(int,int);
+int sum(int,int);
 int main(void) {
-	int a,b;
+	int a,b,c;
 	setbuf(stdout,NULL);
-	printf("Enter two numbers: ");
+	printf("Enter two values");
 	scanf("%d%d",&a,&b);
-	sum(a,b);
+	c=sum(a,b);
+	printf("Sum is %d",c);
 	return EXIT_SUCCESS;
 }
-void sum(int num1,int num2){
-	int b;
-	b=num1+num2;
-	printf("Sum is %d",b);
+int sum(int num1,int num2){
+	int result;
+	result=num1+num2;
+	return result;
 }
 ```
 
